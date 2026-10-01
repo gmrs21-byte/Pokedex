@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex - Mi Pokédex</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- CABECERA -->
+
+    <header class="cabecera">
+
+        <div
+    class="logo"
+    onclick="location.href='index.html'"
+>
+
+    <div class="pokeball-logo">
+        <span></span>
+    </div>
+
+    <div>
+        <h1>MI POKÉDEX</h1>
+        <p>Tu enciclopedia Pokémon</p>
+    </div>
+
+</div>
+
+
+        <nav>
+
+            <button
+                class="boton-nav"
+                onclick="location.href='index.html'">
+
+                🔎 Buscar
+
+            </button>
+
+
+            <button
+                class="boton-nav activo"
+                onclick="location.href='lista.html'">
+
+                📖 Pokédex
+
+            </button>
+
+<button
+    class="boton-nav"
+    onclick="location.href='capturas.html'">
+
+    🎯 Capturas
+
+</button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+
+        <section class="presentacion">
+
+            <p class="pequeno">
+                POKÉDEX
+            </p>
+
+
+            <h2>
+                Todos los Pokémon
+            </h2>
+
+
+            <p class="descripcion-inicio">
+
+                Explora los Pokémon disponibles en la Pokédex.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- FILTROS -->
+
+        <section class="buscador">
+
+            <div class="titulo-buscador">
+
+                <span class="icono-busqueda">
+                    🔎
+                </span>
+
+
+                <div>
+
+                    <h2>
+                        Filtrar Pokémon
+                    </h2>
+
+                    <p>
+                        Busca por nombre, número o tipo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="barra-busqueda">
+
+                <input
+                    type="text"
+                    id="filtroPokemon"
+                    placeholder="Buscar Pokémon..."
+                    autocomplete="off"
+                >
+
+<select id="filtroTipo">
+
+    <option value="Todos">Todos los tipos</option>
+
+    <option value="Planta">Planta</option>
+    <option value="Veneno">Veneno</option>
+    <option value="Fuego">Fuego</option>
+    <option value="Agua">Agua</option>
+    <option value="Eléctrico">Eléctrico</option>
+    <option value="Volador">Volador</option>
+    <option value="Dragón">Dragón</option>
+    <option value="Psíquico">Psíquico</option>
+    <option value="Normal">Normal</option>
+    <option value="Lucha">Lucha</option>
+    <option value="Tierra">Tierra</option>
+    <option value="Roca">Roca</option>
+    <option value="Bicho">Bicho</option>
+    <option value="Fantasma">Fantasma</option>
+    <option value="Siniestro">Siniestro</option>
+    <option value="Acero">Acero</option>
+    <option value="Hielo">Hielo</option>
+    <option value="Hada">Hada</option>
+
+</select>
+
+
+<select id="ordenPokemon">
+
+    <option value="numero">Ordenar por número</option>
+
+    <option value="nombre">Ordenar por nombre</option>
+
+</select>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- LISTA -->
+
+        <section id="listaPokemon">
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- PIE -->
+
+    <footer>
+
+        <p>
+            🔴 Mi Pokédex
+        </p>
+
+        <span>
+            Una Pokédex hecha a tu manera
+        </span>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/datos.js"></script>
+
+    <script src="js/lista.js"></script>
+
+
+</body>
+
+</html>

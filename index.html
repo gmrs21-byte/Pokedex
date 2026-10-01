@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Pokédex</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- CABECERA -->
+
+    <header class="cabecera">
+
+        <div
+    class="logo"
+    onclick="location.href='index.html'"
+>
+
+    <div class="pokeball-logo">
+        <span></span>
+    </div>
+
+    <div>
+        <h1>MI POKÉDEX</h1>
+        <p>Tu enciclopedia Pokémon</p>
+    </div>
+
+</div>
+
+        <nav>
+
+            <button
+                class="boton-nav activo"
+                onclick="location.href='index.html'">
+
+                🔎 Buscar
+
+            </button>
+
+
+            <button
+                class="boton-nav"
+                onclick="location.href='lista.html'">
+
+                📖 Pokédex
+
+            </button>
+
+<button
+    class="boton-nav"
+    onclick="location.href='capturas.html'">
+
+    🎯 Capturas
+
+</button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+
+        <!-- PRESENTACIÓN -->
+
+        <section class="presentacion">
+
+            <p class="pequeno">
+                BIENVENIDO A
+            </p>
+
+
+            <h2>
+                Explora el mundo Pokémon
+            </h2>
+
+
+            <p class="descripcion-inicio">
+
+                Busca cualquier Pokémon por su nombre,
+                número o tipo y descubre toda su información.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- BUSCADOR -->
+
+        <section class="buscador">
+
+
+            <div class="titulo-buscador">
+
+                <span class="icono-busqueda">
+                    🔎
+                </span>
+
+
+                <div>
+
+                    <h2>
+                        Buscar Pokémon
+                    </h2>
+
+                    <p>
+                        Encuentra tu Pokémon rápidamente
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="barra-busqueda">
+
+
+                <input
+
+                    type="text"
+
+                    id="busqueda"
+
+                    placeholder="Buscar Pokémon..."
+
+                    autocomplete="off"
+
+                >
+
+
+                <button
+
+                    onclick="buscarPokemon()"
+
+                    class="boton-buscar">
+
+                    BUSCAR
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- RESULTADOS -->
+
+        <section class="zona-resultados">
+
+            <div id="resultados">
+
+
+                <div class="mensaje-inicial">
+
+
+                    <div class="pokeball-grande">
+                        <span></span>
+                    </div>
+
+
+                    <h3>
+                        ¿Qué Pokémon estás buscando?
+                    </h3>
+
+
+                    <p>
+                        Escribe un nombre, número o tipo.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+            🔴 Mi Pokédex
+        </p>
+
+        <span>
+            Una Pokédex hecha a tu manera
+        </span>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/datos.js"></script>
+
+    <script src="js/buscador.js"></script>
+
+
+</body>
+
+</html>

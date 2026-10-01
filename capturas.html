@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capturas - Mi Pokédex</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="cabecera">
+
+   <div
+    class="logo"
+    onclick="location.href='index.html'"
+>
+
+    <div class="pokeball-logo">
+        <span></span>
+    </div>
+
+    <div>
+        <h1>MI POKÉDEX</h1>
+        <p>Tu enciclopedia Pokémon</p>
+    </div>
+
+</div>
+
+
+    <nav>
+
+        <button
+            class="boton-nav"
+            onclick="location.href='index.html'">
+            🔎 Buscar
+        </button>
+
+        <button
+            class="boton-nav"
+            onclick="location.href='lista.html'">
+            📖 Pokédex
+        </button>
+
+        <button
+            class="boton-nav activo"
+            onclick="location.href='capturas.html'">
+            🎯 Capturas
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="presentacion">
+
+        <p class="pequeno">CAPTURAS</p>
+
+        <h2>Mis Pokémon</h2>
+
+        <p class="descripcion-inicio">
+            Aquí puedes ver los Pokémon que has capturado.
+        </p>
+
+    </section>
+
+
+    <section id="capturasPokemon"></section>
+
+</main>
+
+
+<footer>
+
+    <p>🔴 Mi Pokédex</p>
+
+    <span>Una Pokédex hecha a tu manera</span>
+
+</footer>
+
+
+<script src="js/datos.js"></script>
+<script src="js/capturas.js"></script>
+
+</body>
+
+</html>
