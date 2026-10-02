@@ -141,6 +141,132 @@ body {
     cursor: pointer;
 }
 
+/* =========================
+   PÁGINA DE CUENTA
+========================= */
+
+.cuenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 60px;
+}
+
+
+.formulario-cuenta {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+
+.formulario-cuenta label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.formulario-cuenta label:first-child {
+    margin-top: 0;
+}
+
+
+.formulario-cuenta input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s ease;
+    background: #fafafa;
+}
+
+
+.formulario-cuenta input:focus {
+    border-color: #e53935;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.10);
+}
+
+
+.formulario-cuenta input::placeholder {
+    color: #999;
+}
+
+
+.formulario-cuenta button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.formulario-cuenta button:first-of-type {
+    background: #e53935;
+    color: white;
+}
+
+
+.formulario-cuenta button:first-of-type:hover {
+    background: #c62828;
+    transform: translateY(-1px);
+}
+
+
+.formulario-cuenta button:nth-of-type(2) {
+    background: #f1f1f1;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+.formulario-cuenta button:nth-of-type(2):hover {
+    background: #e2e2e2;
+}
+
+
+#mensaje-cuenta {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CUENTA EN MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+    .cuenta {
+        padding: 10px 15px 40px;
+    }
+
+    .formulario-cuenta {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+}
+
 
 /* NAVEGACIÓN */
 
