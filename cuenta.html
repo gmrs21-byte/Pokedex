@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mi cuenta - Mi Pokédex</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="cabecera">
+
+        <div
+            class="logo"
+            onclick="location.href='index.html'"
+        >
+
+            <div class="pokeball-logo">
+                <span></span>
+            </div>
+
+            <div>
+
+                <h1>MI POKÉDEX</h1>
+
+                <p>
+                    Tu enciclopedia Pokémon
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <button
+                class="boton-nav"
+                onclick="location.href='index.html'"
+            >
+                🔎 Buscar
+            </button>
+
+            <button
+                class="boton-nav"
+                onclick="location.href='lista.html'"
+            >
+                📖 Pokédex
+            </button>
+
+            <button
+                class="boton-nav"
+                onclick="location.href='capturas.html'"
+            >
+                🎯 Capturas
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="presentacion">
+
+            <p class="pequeno">
+                MI CUENTA
+            </p>
+
+            <h2>
+                Crear cuenta
+            </h2>
+
+            <p class="descripcion-inicio">
+                Crea una cuenta para guardar tus capturas en la nube.
+            </p>
+
+        </section>
+
+
+        <section class="cuenta">
+
+            <div class="formulario-cuenta">
+
+                <label for="email">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Tu correo electrónico"
+                >
+
+
+                <label for="password">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Tu contraseña"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="registrarse()"
+                >
+                    Crear cuenta
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="iniciarSesion()"
+                >
+                    Iniciar sesión
+                </button>
+
+
+                <p id="mensaje-cuenta"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            🔴 Mi Pokédex
+        </p>
+
+        <span>
+            Una Pokédex hecha a tu manera
+        </span>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+
+    <script>
+
+        async function registrarse() {
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+            const password =
+                document
+                    .getElementById("password")
+                    .value;
+
+
+            const mensaje =
+                document.getElementById(
+                    "mensaje-cuenta"
+                );
+
+
+            if (!email || !password) {
+
+                mensaje.textContent =
+                    "Rellena el correo y la contraseña.";
+
+                return;
+
+            }
+
+
+            const { data, error } =
+                await supabaseClient.auth.signUp({
+
+                    email: email,
+
+                    password: password
+
+                });
+
+
+            if (error) {
+
+                mensaje.textContent =
+                    error.message;
+
+                return;
+
+            }
+
+
+            mensaje.textContent =
+                "Cuenta creada correctamente. Revisa tu correo si Supabase te pide confirmar la cuenta.";
+
+        }
+
+
+
+        async function iniciarSesion() {
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+            const password =
+                document
+                    .getElementById("password")
+                    .value;
+
+
+            const mensaje =
+                document.getElementById(
+                    "mensaje-cuenta"
+                );
+
+
+            if (!email || !password) {
+
+                mensaje.textContent =
+                    "Rellena el correo y la contraseña.";
+
+                return;
+
+            }
+
+
+            const { data, error } =
+                await supabaseClient.auth.signInWithPassword({
+
+                    email: email,
+
+                    password: password
+
+                });
+
+
+            if (error) {
+
+                mensaje.textContent =
+                    error.message;
+
+                return;
+
+            }
+
+
+            mensaje.textContent =
+                "Has iniciado sesión correctamente.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
